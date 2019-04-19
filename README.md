@@ -48,3 +48,15 @@ $ docker run -it -p 8888:8888 dash00/tensorflow-python3-jupyter
 ```
 $ docker run -it -p 8888:8888 -v /$(pwd)/notebooks:/notebooks dash00/tensorflow-python3-jupyter
 ```
+
+### Create time-series images (dir) from video 
+
+The following with sample out frames every *n* times per second (-or *n* frames / second?): 
+
+**1 frame per second saved as image**
+
+**-q:v 1 = somehow makes better quality jpeg**
+
+```
+! ffmpeg -i videodata/13B35A/0801_0841/00003.MTS -vf fps=1 -q:v 1 imagedata/13B35A/0801_0841/00003/img_%05d.jpg
+```
