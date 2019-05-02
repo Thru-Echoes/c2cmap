@@ -9,7 +9,7 @@ def get_video_to_frames_shell(input_path, start_time, end_time, output_path, fps
             "-ss",
             start_time,
             "-to",
-            end_time
+            end_time,
            "-i",
            input_path,
            "-vf",
